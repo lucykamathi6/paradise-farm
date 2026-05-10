@@ -1,3 +1,16 @@
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
 body {
     background-image: url("home14.jpg");
     background-size: cover;
