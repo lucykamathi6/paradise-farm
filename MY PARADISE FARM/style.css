@@ -1,0 +1,249 @@
+body {
+    background-image: url("home14.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+}
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+.logo{
+    color: firebrick;
+    font-family: Arial;
+padding-left: 20px;
+ float: left;
+ padding-top: 10px;
+
+}
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+
+}
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: Arial;
+    font-weight: bolder;
+    transition: 0.4s ease-in-out;
+
+}
+ul li a:hover{
+    color: greenyellow;
+
+}
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 270px;
+}
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid orangered;
+    margin-top: 13px;
+    color: blanchedalmond;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    
+}
+.btn{
+    width: 100px;
+    height: 40px;
+    background: red;
+    border: 2px  solid orangered;
+    margin-top: 13px;
+    color: blanchedalmond;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+.btn:focus{
+    outline: none;
+}
+.srch:focus{
+    outline: none;
+}
+.content{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color: black;
+    position: relative;
+    font-weight: bold;
+    font-size: larger;
+}
+.content .par{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+
+}
+.content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    margin-top: 2px;
+    letter-spacing: 2px;
+}
+.content .cn{
+    width: 160px;
+    height: 40px;
+    background: rgb(237, 90, 90);
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+}
+.content .cn a{
+    text-decoration: none;
+    color: black;
+    transition: .3s ease;
+}
+.cn:hover{
+    background-color:greenyellow ;
+}
+.content span{
+    color: orangered;
+    font-size: 60px;
+}
+.form{
+    width: 250px;
+    height: 380px;
+    background: linear-gradient( to top, rgb(244, 241, 241)50%,rgb(232, 48, 48)50%);
+    top: 20px;
+    position: absolute;
+    left: 870px;
+    border-radius: 10px;
+    padding: 25px;
+
+}
+.form h2{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: rgb(239, 42, 42);
+    font-size: 22px;
+    border-radius: 18px;
+    margin: 2px;
+    padding: 8px;
+    background-color: white;
+
+}
+.form input{
+    width: 240px;
+    height: 25px;
+    background: transparent;
+    border-bottom: 1px greenyellow;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+
+}
+.form input{
+    outline: white;
+    border: white;
+    background-color: white;
+
+}
+::placeholder{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btnn{
+    width: 240px;
+    height: 40px;
+    background: white;
+    border: none;
+    margin: 30px;
+    font-size: 19px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: blanchedalmond;
+    transition: 0.4s ease;
+
+}
+.btnn:hover{
+    background-color: greenyellow;
+    color: greenyellow;
+}
+.btnn a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.form .link{
+    font-family: Arial;
+    text-align: center;
+
+}
+.form link a{
+    text-decoration: none;
+    color: black;
+
+}
+.liw{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+
+}
+.moving-heading {
+  font-size: 40px;
+  color: black;
+  border-right: 3px solid white; /* cursor */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(25) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}

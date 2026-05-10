@@ -1,0 +1,364 @@
+
+@keyframes moveBg {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-3%); /* moves left */
+  }
+  100% {
+    transform: translateX(0); /* back to start */
+  }
+}
+
+p1{
+     padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    font-weight: bolder;
+    color: black;
+    font-size: 20px;
+
+}
+p2{
+     padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    font-weight: bolder;
+    color: white;
+    font-size: 20px;
+
+}
+p4{
+     padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    font-weight: bolder;
+    color: black;
+    font-size: 20px;
+
+}
+P3{
+ font-weight: bolder;
+ color: white;
+ font-size: larger;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    color: orangered;
+    text-underline-position: below;
+}
+.three-box-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+  margin: 40px 20px;
+}
+
+.box {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  min-height: 200px; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.box h3 {
+  color: orangered;
+  margin-top: 0;
+  border-bottom: 2px solid #C8E6C9;
+  padding-bottom: 10px;
+}
+
+/* Mobile: Stack to 1 column */
+@media (max-width: 768px) {
+  .three-box-section {
+    grid-template-columns: 1fr;
+  }
+}
+.moving-heading {
+  font-size: 60px;
+  color: black;
+  animation: bounceIn 1s ease-out;
+  
+  border-bottom: dotted black;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.circle-wrapper {
+  text-align: center;
+  margin: 40px auto;
+  width: fit-content;
+}
+
+.circle-title {
+  color: orangered;
+  font-size: 70px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid black;
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+.circle-big {
+  width: 350px;        /* bigger circle */
+  height: 350px;       /* same as width */
+  background-color: white;
+  border: 4px solid #2E7D32;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: orangered;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 40px;       /* space inside so text doesn't touch edges */
+  margin: 0 auto;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Mobile: make it smaller so it fits */
+@media (max-width: 768px) {
+  .circle-big {
+    width: 280px;
+    height: 280px;
+    font-size: 14px;
+    padding: 30px;
+  }
+}
+
+.about-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+/* Left side: History circle */
+.circle-wrapper {
+  text-align: center;
+  width: fit-content;
+}
+
+.circle-title {
+  color: black;
+  font-size: 35px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid black;
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+.circle-big {
+  width: 350px;
+  height: 350px;
+  background: linear-gradient white;
+  border: 5px solid orangered;
+  outline: 3px solid orangered;
+  outline-offset: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 40px;
+  margin: 0 auto;
+  box-shadow: 0 10px 20px rgba(46,125,50,0.4);
+}
+
+/* Right side: Orbiting images */
+.orbit-section {
+  text-align: center;
+}
+
+.orbit-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  animation: spin 25s linear infinite;
+}
+
+.orbit-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px;
+  height: 110px;
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  border: 4px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.3;
+  z-index: 2;
+  animation: spin-reverse 25s linear infinite;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.orbit-image {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  top: 50%;
+  left: 50%;
+  margin-left: -45px;
+  margin-top: -45px;
+  text-align: center;
+}
+
+.orbit-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid orangered;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  animation: spin-reverse 25s linear infinite;
+  transition: transform 0.3s;
+}
+
+.orbit-image img:hover {
+  transform: scale(1.1);
+  border-color: white;
+}
+
+.orbit-image p {
+  margin: 6px 0 0 0;
+  color: orangered;
+  font-weight: bold;
+  font-size: 22px;
+  animation: spin-reverse 25s linear infinite;
+}
+
+/* 5 images positioned 72° apart */
+.orbit-1 { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+.orbit-2 { transform: rotate(72deg) translateX(150px) rotate(-72deg); }
+.orbit-3 { transform: rotate(144deg) translateX(150px) rotate(-144deg); }
+.orbit-4 { transform: rotate(216deg) translateX(150px) rotate(-216deg); }
+.orbit-5 { transform: rotate(288deg) translateX(150px) rotate(-288deg); }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spin-reverse {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+/* Pause on hover */
+.orbit-container:hover,
+.orbit-container:hover .orbit-center,
+.orbit-container:hover .orbit-image img,
+.orbit-container:hover .orbit-image p {
+  animation-play-state: paused;
+}
+
+/* Mobile: stack them vertically */
+@media (max-width: 900px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .circle-big {
+    width: 280px;
+    height: 280px;
+    font-size: 14px;
+    padding: 30px;
+  }
+  
+  .orbit-container {
+    width: 320px;
+    height: 320px;
+  }
+  
+  .orbit-image {
+    width: 70px;
+    height: 70px;
+    margin-left: -35px;
+    margin-top: -35px;
+  }
+  
+  .orbit-1 { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+  .orbit-2 { transform: rotate(72deg) translateX(120px) rotate(-72deg); }
+  .orbit-3 { transform: rotate(144deg) translateX(120px) rotate(-144deg); }
+  .orbit-4 { transform: rotate(216deg) translateX(120px) rotate(-216deg); }
+  .orbit-5 { transform: rotate(288deg) translateX(120px) rotate(-288deg); }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Background image + fade overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('about3.jpg'); /* your current image */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(90%) blur(1px); /* slight blur + dim */
+  z-index: -2;
+}
+
+/* White overlay to make content readable */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(133, 234, 158, 0.53); /* 85% white = very faded bg */
+  z-index: -1;
+}
+
+/* Make sure all your content sits above the overlays */
+nav, .content, .three-box-section, .about-section, .circle-wrapper {
+  position: relative;
+  z-index: 1;
+}

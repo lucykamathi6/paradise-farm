@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paradise Farm - Services & Shop</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: Arial, sans-serif; 
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200') center/cover fixed;
+      color: #333; 
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    h1, h2 { color: #fff; text-align: center; margin: 30px 0 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+    .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); margin-bottom: 30px; }
+    
+    /* Products Grid */
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-bottom: 40px; }
+    .product { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .product-images { display: flex; gap: 5px; padding: 10px; background: #f9f9f9; }
+    .product-images img { width: 32%; height: 100px; object-fit: cover; border-radius: 4px; }
+    .product-info { padding: 20px; }
+    .product-info h3 { color: #2e7d32; margin-bottom: 8px; }
+    .price { font-size: 24px; font-weight: bold; color: #1b5e20; margin: 10px 0; }
+    .buy-btn { background: #2e7d32; color: white; padding: 12px; border: none; border-radius: 4px; cursor: pointer; width: 100%; font-size: 16px; }
+    .buy-btn:hover { background: #1b5e20; }
+    
+    /* Payment Methods */
+    .payment-methods { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0; }
+    .payment-badge { background: #e8f5e9; color: #1b5e20; padding: 10px 20px; border-radius: 20px; font-weight: bold; }
+    
+    /* Booking Form */
+    input, select, textarea { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 4px; }
+    button { background: #2e7d32; color: white; padding: 14px; border: none; border-radius: 4px; cursor: pointer; width: 100%; font-size: 16px; }
+    button:hover { background: #1b5e20; }
+    .success { background: #d4edda; color: #155724; padding: 12px; border-radius: 4px; margin-top: 15px; display: none; }
+    
+    @media (max-width: 768px) { .product-images img { height: 80px; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Paradise Farm Shop & Bookings</h1>
+    
+    <!-- PRODUCTS SECTION -->
+    <h2>Fresh From Our Farm</h2>
+    <div class="products">
+      
+      <!-- Product 1: Organic Vegetables -->
+      <div class="product">
+        <div class="product-images">
+          <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=300" alt="Tomatoes">
+          <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=300" alt="Kale">
+          <img src="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?w=300" alt="Carrots">
+        </div>
+        <div class="product-info">
+          <h3>Organic Vegetable Basket</h3>
+          <p>Fresh seasonal vegetables: tomatoes, kale, carrots, spinach. 5kg mixed basket.</p>
+          <div class="price">KSh 1,200</div>
+          <button class="buy-btn" onclick="orderProduct('Organic Vegetable Basket', 1200)">Order Now</button>
+        </div>
+      </div>
+
+      <!-- Product 2: Free Range Eggs -->
+      <div class="product">
+        <div class="product-images">
+          <img src="https://images.unsplash.com/photo-1587486913049-53fc88980cfc?w=300" alt="Eggs">
+          <img src="https://images.unsplash.com/photo-1569288063643-5a1c5cefae3b?w=300" alt="Chicken">
+          <img src="https://images.unsplash.com/photo-1607690424560-35d967d6ad7c?w=300" alt="Farm eggs">
+        </div>
+        <div class="product-info">
+          <h3>Free Range Eggs</h3>
+          <p>Farm fresh eggs from free-range chickens. Tray of 30 eggs.</p>
+          <div class="price">KSh 450</div>
+          <button class="buy-btn" onclick="orderProduct('Free Range Eggs - 30 Tray', 450)">Order Now</button>
+        </div>
+      </div>
+
+      <!-- Product 3: Raw Honey -->
+      <div class="product">
+        <div class="product-images">
+          <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=300" alt="Honey jar">
+          <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=300" alt="Beehive">
+          <img src="https://images.unsplash.com/photo-1471943311424-646960669fbc?w=300" alt="Honey comb">
+        </div>
+        <div class="product-info">
+          <h3>Pure Raw Honey</h3>
+          <p>Unprocessed honey from our farm beehives. 1kg jar.</p>
+          <div class="price">KSh 800</div>
+          <button class="buy-btn" onclick="orderProduct('Pure Raw Honey 1kg', 800)">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAYMENT METHODS -->
+    <div class="card">
+      <h2 style="color: #2e7d32; text-shadow: none;">Payment Methods Accepted</h2>
+      <div class="payment-methods">
+        <div class="payment-badge">M-Pesa: 0700 123 456</div>
+        <div class="payment-badge">Cash on Delivery</div>
+        <div class="payment-badge">Card Payment on Site</div>
+      </div>
+      <p style="text-align: center; margin-top: 15px;">For orders: Click "Order Now" above OR fill the booking form below and select "Product Order" as service.</p>
+    </div>
+
+    <!-- BOOKING FORM -->
+    <div class="card">
+      <h2 style="color: #2e7d32; text-shadow: none;">Book a Visit or Order Products</h2>
+      <form id="bookingForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <select id="service" required>
+          <option value="">Select Service / Order Type</option>
+          <option value="Farm Tour">Farm Tour - KSh 500/person</option>
+          <option value="Vegetable Harvesting">Vegetable Harvesting Experience</option>
+          <option value="School Trip">School Trip</option>
+          <option value="Corporate Team Building">Corporate Team Building</option>
+          <option value="Product Order">Product Order - Specify in message</option>
+        </select>
+        <input type="date" id="date" required>
+        <input type="number" id="guests" placeholder="Number of Guests / Quantity" min="1" required>
+        <textarea id="message" placeholder="Additional requests or product details..." rows="4"></textarea>
+        <button type="submit">Submit Booking / Order</button>
+      </form>
+      <div class="success" id="successMsg">Submitted! We'll contact you via WhatsApp to confirm payment.</div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBntLu39GD9q5-VR7Wd8pSe2sU2nc5NbP8",
+      authDomain: "paradise-farm-70732.firebaseapp.com",
+      projectId: "paradise-farm-70732",
+      storageBucket: "paradise-farm-70732.firebasestorage.app",
+      messagingSenderId: "369603123930",
+      appId: "1:369603123930:web:5cdfe1a682aad7a73263e3"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // Pre-fill form when "Order Now" is clicked
+    window.orderProduct = (productName, price) => {
+      document.getElementById('service').value = 'Product Order';
+      document.getElementById('message').value = `I want to order: ${productName} - KSh ${price}`;
+      document.getElementById('guests').value = 1;
+      document.getElementById('bookingForm').scrollIntoView({ behavior: 'smooth' });
+    };
+
+    document.getElementById('bookingForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = e.target.querySelector('button');
+      btn.disabled = true;
+      btn.textContent = 'Submitting...';
+      
+      try {
+        await addDoc(collection(db, "bookings"), {
+          name: document.getElementById('name').value,
+          email: document.getElementById('email').value,
+          phone: document.getElementById('phone').value,
+          service: document.getElementById('service').value,
+          date: document.getElementById('date').value,
+          guests: Number(document.getElementById('guests').value),
+          message: document.getElementById('message').value,
+          status: "pending",
+          createdAt: serverTimestamp()
+        });
+        document.getElementById('successMsg').style.display = 'block';
+        e.target.reset();
+        setTimeout(() => document.getElementById('successMsg').style.display = 'none', 5000);
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+      btn.disabled = false;
+      btn.textContent = 'Submit Booking / Order';
+    });
+  </script>
+</body>
+</html>
