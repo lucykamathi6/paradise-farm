@@ -11,6 +11,14 @@
     flex-direction: column;
   }
 }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  flex: 1 1 300px;
+}
 body {
     background-image: url("home14.jpg");
     background-size: cover;
